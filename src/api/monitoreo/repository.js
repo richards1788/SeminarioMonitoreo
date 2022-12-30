@@ -13,9 +13,6 @@ const insertMonitoreo = async ({tem,hum}) => {
     .then(function (e) {
       return 1;
     })
-    .catch(function (e) {
-      return e;
-    });
 };
 
 module.exports = {
