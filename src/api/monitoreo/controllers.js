@@ -2,7 +2,7 @@ const repo = require('./repository');
 
 const postMonitoreo = async (req, res) => {
   try {
-    const { tem , hum} =req.params;
+    const { tem , hum} =req.body;
     const data = await repo.insertMonitoreo({tem,hum});
     if (data===1) {
       res.status(200).send({ Message: 'Registro exitoso' });
