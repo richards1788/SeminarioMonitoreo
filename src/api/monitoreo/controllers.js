@@ -14,6 +14,18 @@ const postMonitoreo = async (req, res) => {
   }
 };
 
+const getMonitoreo = async (req, res) => {
+  try {
+    const data = await repo.GetMonitoreo();
+    if (data!="") {
+      res.status(200).send(data);
+    } else {
+      res.send({ Message: 'No hay datos Registrados' });
+    }
+  } catch (error) {
+    res.status(500).send(JSON.stringify(error));
+  }
+};
 
 
-module.exports = { postMonitoreo };
+module.exports = { postMonitoreo ,getMonitoreo};

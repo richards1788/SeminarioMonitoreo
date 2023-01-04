@@ -15,6 +15,16 @@ const insertMonitoreo = async ({tem,hum}) => {
     })
 };
 
+
+const GetMonitoreo = async () => {
+  const query = await knex
+  .select('Temperatura','humeda','fecha')
+  .from('monitoreo')
+  .orderBy('fecha','desc')
+return query;
+};
+
 module.exports = {
-  insertMonitoreo
+  insertMonitoreo,
+  GetMonitoreo
 };
