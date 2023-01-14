@@ -17,13 +17,14 @@ const postMonitoreo = async (req, res) => {
 const getMonitoreo = async (req, res) => {
   try {
     const data = await repo.GetMonitoreo();
+    console.log(data);
     var tem,hum;
     if (data!="") {
       if(data[0].Temperatura  < 17) {
         tem=data[0].Temperatura + " Mínima";
       }  if(data[0].Temperatura  > 17 && data[0].Temperatura  <=24) {
         tem=data[0].Temperatura + " Optimo";
-      }if(data[0].Temperatura  >26){
+      }if(data[0].Temperatura  >24){
         tem=data[0].Temperatura + " Máxima";
       }
 
