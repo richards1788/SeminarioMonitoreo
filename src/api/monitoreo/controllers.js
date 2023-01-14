@@ -35,12 +35,12 @@ const getMonitoreo = async (req, res) => {
         hum= data[0].humeda + " Alta";
       }
 
-      var dd ={
+      var dd =[{
         Temperatura: tem,
         humeda: hum,
         fecha: data[0].fecha,
         hora: data[0].hora
-      }
+      }]
       res.status(200).send(dd);
     } else {
       res.send({ Message: 'No hay datos Registrados' });
