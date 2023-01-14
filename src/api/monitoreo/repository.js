@@ -20,7 +20,7 @@ const insertMonitoreo = async ({tem,hum}) => {
 
 
 const GetMonitoreo = async () => {
-  const query = await knex.raw('SELECT TOP 1 * FROM monitoreo ORDER BY id DESC')
+  const query = await knex.raw('SELECT TOP 1 Temperatura,humeda,fecha,hora FROM [dbo].[monitoreo]ORDER BY id DESC')
 return query;
 };
 

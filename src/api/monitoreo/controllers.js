@@ -36,7 +36,6 @@ const getMonitoreo = async (req, res) => {
       }
 
       var dd ={
-        id: data[0].id ,
         Temperatura: tem,
         humeda: hum,
         fecha: data[0].fecha,
