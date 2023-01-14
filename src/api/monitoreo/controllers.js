@@ -32,7 +32,7 @@ const getMonitoreo = async (req, res) => {
       }  if(data[0].humeda  >= 50 && data[0].humeda  <=70) {
         hum=data[0].humeda + " Optimo";
       }if(data[0].humeda  >70){
-        data[0].humeda + " Alta";
+        hum= data[0].humeda + " Alta";
       }
 
       var dd ={
